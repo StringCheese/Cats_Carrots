@@ -12,7 +12,7 @@ function createXmlHttpRequestObject(){
 	return xmlHttp;
 }
 
-function readTextFile(Carrots.txt)
+/*function readTextFile(Carrots.txt)
 {
 	var rawFile = new XMLHttpRequest();
 	rawFile.open("GET",Carrots.txt,true);
@@ -29,42 +29,62 @@ function readTextFile(Carrots.txt)
 	}
 	rawFile.send(#tool);
 }
-
-/*function process() {
-	if(xmlHttp) {
-		try{
+*/
+function process() 
+{
+	if(xmlHttp) 
+	{
+		try
+		{
 			xmlHttp.open("GET", "Carrots.txt", true);
 			xmlHttp.onreadystatechange = handleServerResponse;
 			xmlHttp.send(null);
 		}
-		 catch(e){
-			alert.e.toString();
+		catch(e)
+		{
+		alert.e.toString();
 		}
 	}
 }
 
-function handleServerResponse() {
-	
+function handleServerResponse(Carrots.txt) 
+{
 	var theD = document.getElementById('theD');
-	if(xmlHttp.readyState==1){
+	if(xmlHttp.readyState==1)
+	{
 		theD.innerHTML += "Status 1: server connection established <br/>";	
-	} else if(xmlHttp.readyState==2){
+	} 
+	
+	else if(xmlHttp.readyState==2)
+	{
 		theD.innerHTML += "Status 2: request received <br/>";	
-	} else if(xmlHttp.readyState==3){
+	}
+	
+	else if(xmlHttp.readyState==3)
+	{
 		theD.innerHTML += "Status 3: processing request <br/>";	
-	} else if(xmlHttp.readyState==4){
-		
-		if(xmlHttp.status==200){
-				try{
+	}
+	
+	else if(xmlHttp.readyState==4)
+	{
+		if(xmlHttp.status==200 || xmlHttp.status==0)
+		{
+				try
+				{
 					var text = xmlHttp.responseText;
 					theD.innerHTML += "Status 4: request is finished and response is ready <br/>";
 					theD.innerHTML += text;	
-				} catch(e){
+				}
+				
+				catch(e)
+				{
 				alert(e.toString());	
 		}
-		} else {
+		} 
+		else 
+		{
 			alert(xmlHttp.statusText);
 		}
 	}
 }
-*/
+

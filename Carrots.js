@@ -15,7 +15,7 @@ function createXmlHttpRequestObject(){
 function readTextFile(Carrots.txt)
 {
 	var rawFile = new XMLHttpRequest();
-	rawFile.open("GET",Carrots.txt,false);
+	rawFile.open("GET",Carrots.txt,true);
 	rawFile.onreadystatechange = function ()
 	{
 		if(rawFile.readyState === 4)
@@ -27,7 +27,7 @@ function readTextFile(Carrots.txt)
 			}
 		}
 	}
-	rawFile.send(null);
+	rawFile.send(#tool);
 }
 
 /*function process() {

@@ -26,6 +26,7 @@ function process() {
 }
 
 function handleServerResponse() {
+	var theD;
 	theD = document.getElementById('theD');
 	if(xmlHttp.readyState==1){
 		theD.innerHTML += "Status 1: server connection established <br/>";	

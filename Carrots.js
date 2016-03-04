@@ -12,7 +12,25 @@ function createXmlHttpRequestObject(){
 	return xmlHttp;
 }
 
-function process() {
+function readTextFile(Carrots.txt)
+{
+	var rawFile = new XMLHttpRequest();
+	rawFile.open("GET",Carrots.txt,false);
+	rawFile.onreadystatechange = function ()
+	{
+		if(rawFile.readyState === 4)
+		{
+			if(rawFile.status === 200 || rawFile.status == 0)
+			{
+				var allText = rawFile.responseText;
+				alert(allText);
+			}
+		}
+	}
+	rawFile.send(null);
+}
+
+/*function process() {
 	if(xmlHttp) {
 		try{
 			xmlHttp.open("GET", "Carrots.txt", true);
@@ -49,3 +67,4 @@ function handleServerResponse() {
 		}
 	}
 }
+*/

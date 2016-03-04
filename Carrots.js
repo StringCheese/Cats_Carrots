@@ -38,7 +38,7 @@ function handleServerResponse() {
 		
 		if(xmlHttp.status==200){
 				try{
-					text = xmlHttp.responseText;
+					var text = xmlHttp.responseText;
 					theD.innerHTML += "Status 4: request is finished and response is ready <br/>";
 					theD.innerHTML += text;	
 				} catch(e){
